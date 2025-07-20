@@ -24,7 +24,7 @@ from sklearn.metrics import (
 import time
 
 def main():
-    st.title("Better Weka")
+    st.title("Visual Workbench")
     st.markdown("This web app provides a GUI for basic data preprocessing and model training using Python.")
 
     uploaded_file = st.sidebar.file_uploader("Upload CSV File", type=["csv"])
