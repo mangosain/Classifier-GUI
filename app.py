@@ -46,8 +46,8 @@ def main():
             st.subheader("Raw Data")
             st.write(df)
 
-        st.sidebar.checkbox("Show statistics", value=False, key="train_model")
-        if st.session_state.get("train_model", False):
+        st.sidebar.checkbox("Show statistics", value=False, key="show_statistics")
+        if st.session_state.get("show_statistics", False):
             st.subheader("Data Overview")
             st.write(df.describe())
             st.write("Number of rows:", df.shape[0])
@@ -142,7 +142,7 @@ def main():
                     st.warning("Training interrupted!")
                     progress_bar.empty()
                     st.stop()
-                time.sleep(0.01)  # Simulate progress update
+                time.sleep(0.01)
                 progress_bar.progress(i + 1, text="Training model...")
 
             ModelClass = model_options[selected_model]
