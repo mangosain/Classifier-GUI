@@ -70,7 +70,7 @@ def main():
             st.pyplot(plt)
 
         st.sidebar.divider()
-        st.sidebar.subheader("Model Hyperparameters")
+        st.sidebar.subheader("Data Splitting")
 
         target_variable = st.sidebar.selectbox("Select Target Variable", df.columns)
 
