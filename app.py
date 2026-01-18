@@ -30,7 +30,7 @@ def main():
     uploaded_file = st.sidebar.file_uploader("Upload CSV File", type=["csv"])
 
     if uploaded_file:
-        @st.cache_data(persist=False)
+        @st.cache_data(persist=True)
         def load_data(file):
             data = pd.read_csv(file)
             label = LabelEncoder()
